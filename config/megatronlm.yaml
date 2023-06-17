@@ -1,0 +1,21 @@
+distributed_type: MEGATRON_LM                                                                                                                    
+downcast_bf16: 'no'
+dynamo_config:
+  dynamo_backend: INDUCTOR
+machine_rank: 0
+main_training_function: main
+megatron_lm_config:
+  megatron_lm_gradient_clipping: 1.0
+  megatron_lm_pp_degree: 1
+  megatron_lm_recompute_activations: true
+  megatron_lm_tp_degree: 1
+  megatron_lm_use_distributed_optimizer: true
+mixed_precision: fp16
+num_machines: 1
+num_processes: 2
+rdzv_backend: static
+same_network: true
+tpu_env: []
+tpu_use_cluster: false
+tpu_use_sudo: false
+use_cpu: false
